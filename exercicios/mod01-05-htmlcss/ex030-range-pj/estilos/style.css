@@ -6,3 +6,180 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #612674;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Oxygen", sans-serif;
+}
+
+.main-header {
+    text-align: center;
+    align-items: center;
+    max-width: 1124px;
+    margin: auto;
+}
+
+.main-header img {
+    width: 150px;
+    padding: 10px;
+}
+
+.nav-bar {
+    background-color: var(--primary-color);
+    display: block;
+
+}
+
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 1.5em;
+}
+
+.nav-bar li:hover {
+    background-color: #d496e942;
+}
+
+.hero-banner {
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 2em;
+}
+
+.hero-iconPlay {
+    height: 5em;
+    width: 5em;
+    display: none;
+}
+
+.hero-iconPlay img  {
+    width: 100%;
+}
+
+.hero-banner-title {
+    padding: 12px;
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+.hero-banner-subtitle {
+    padding: 12px 0px 24px 0px;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: #897e8d;
+}
+
+.hero-container a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #58c4c4;
+    padding: 16px 24px;
+    border-radius: 5px;
+}
+
+
+
+@media screen and (min-width: 780px) {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-bar li {
+        display: inline-block;
+    }
+
+    .nav-bar {
+        background-color: transparent;
+        margin: 20px 20px 0 0px;
+          
+    }
+
+    .nav-bar a {
+        color: var(--primary-color);
+    }
+
+    .nav-bar a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-bar li:hover {
+        background-color: transparent;
+    }
+
+    .main-header img {
+        width: 200px;
+        margin: 20px 0 0 20px;   
+    }
+
+    .hero-banner {
+        background-color: var(--primary-color);
+        color: #fff;   
+    }
+
+    .hero-iconPlay {
+        display: block;
+        margin: auto;
+    }
+
+
+    .hero-banner-subtitle {
+        color: #fff;
+        max-width: 960px;
+        display: block;
+        margin: auto;
+    }
+
+    .hero-banner-title {
+        color: #fff;
+    }
+    
+}
+
+@media screen and (min-width: 960px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
