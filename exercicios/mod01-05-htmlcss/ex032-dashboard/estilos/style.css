@@ -20,8 +20,8 @@ html {
 body {
     font-family: "Poppins", sans-serif;
     display: grid;
-    grid-template-columns: 240px 1fr;
-    grid-template-rows: 64px 1fr;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 4rem auto;
     min-height: 100vh;
 }
 
@@ -29,7 +29,7 @@ body {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
     background-color: #fff;
-    padding: 12px 32px;
+    
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -52,13 +52,13 @@ body {
     font-size: 16px;
     gap: 8px;
     margin-bottom: 24px;
+    padding-left: 32px;
 }
 
 .icon-nav-sec svg {
     width: 20px;   /* altera a largura */
     height: 20px;
 }
-
 
 .main-nav .logout-menu {
     margin-top: auto;
@@ -78,6 +78,7 @@ body {
     color: black;
     font-size: 1.5em;
     text-transform: uppercase;
+    padding: 12px 32px;
 
 }
 
@@ -97,8 +98,11 @@ body {
     gap: 1.2em;
 }
 
-.menu-nav li {
-
+.menu-flex {
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 12px 32px 20px 32px;
 }
 
 .grid-main > * {
@@ -267,5 +271,5 @@ body {
     background-color: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    transition: 0.5s ease-in;
+    transition: 0.3s ease-in;
 }
