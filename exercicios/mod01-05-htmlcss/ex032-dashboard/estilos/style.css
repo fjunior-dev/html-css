@@ -13,11 +13,16 @@
     --font-color: #5A5A5F;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: 64px auto;
+    grid-template-rows: 64px 1fr;
+    min-height: 100vh;
 }
 
 .main-nav {
@@ -68,13 +73,8 @@ body {
 }
 
 .grid-main > * {
-    grid-column: span 2;
+  grid-column: span 2;
 }
-
-.grid-main > .grid-half {
-    grid-column: span 1;
-}
-
 
 .grid-main {
     grid-row: 2 / -1;
@@ -84,17 +84,36 @@ body {
     gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
+    min-height: 0;
+    overflow: auto;
+}
+
+.grid-main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-main .summary,
+.grid-main .summary .art-summary {
+  min-width: 0;
+  min-height: 0;
 }
 
 .top-nav {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
     display: flex;
+    align-items: center; /* opcional, para centralizar verticalmente */
     justify-content: space-between;
-    
+    padding: 0 24px;
 }
+
 
 .top-nav .top-nav-sec {
     display: flex;
-    width: 240px;
+    max-width: 240px;
+    width: auto;
     justify-content: space-between;
     padding-left: 20px;
 
@@ -133,6 +152,8 @@ body {
 
 .grid-main {
     padding: 40px 36px;
+    align-content: start;
+    align-items: start;
 }
 
 .grid-main .figure {
@@ -142,13 +163,19 @@ body {
 }
 
 .grid-main .summary {
+    grid-column: 1 / -1;
     display: flex;
-    padding: 22px 30px;
     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 22px 30px;
     background-color: #fff;
     border-radius: 4px;
-    align-items: center;
 
+}
+
+.grid-main > .grid-half {
+  grid-column: span 1;
 }
 
 .grid-main .summary a {
@@ -158,15 +185,18 @@ body {
     font-size: 14px;
     padding: 12px 24px;
     border-radius: 4px;
+    flex: 0 0 auto;           /* não cresce, não encolhe */
+    argin-left: 1rem;
 }
 
 .grid-main .summary .art-summary {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 24px 12px 0;
-    border-right: 0.5px solid var(--font-color);
-    font-size: 14px;
+    flex-direction: column;   /* descrição em cima, número embaixo (se preferir linha, coloque row) */
+    gap: 6px;
+    padding-right: 24px;
+    border-right: 1px solid rgba(90,90,95,0.12);
+    flex: 1 1 0%;             /* flex-grow:1, flex-shrink:1, base 0% -> compartilham o espaço */
+    min-width: 0;  
 }
 
 .grid-main .summary .art-summary .number {
