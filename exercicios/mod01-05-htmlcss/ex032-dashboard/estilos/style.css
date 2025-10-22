@@ -33,17 +33,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .icon-menu, .link-logout {
-    display: flex;               /* coloca ícone e texto lado a lado */
-    align-items: center;         /* alinha verticalmente no centro */
-    gap: 14px;                    /* espaço entre o ícone e o texto */
+    display: flex;
+    align-items: center;
+    gap: 14px;
     text-decoration: none;
     color: var(--font-color);
     font-weight: 500;
     font-size: 14px;
-               /* espaço vertical (opcional) */
 }
 
 .link-logout {
@@ -93,6 +95,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.2em;
+}
+
+.menu-nav li {
+
 }
 
 .grid-main > * {
@@ -165,7 +171,7 @@ body {
 
 .top-nav .perfil {
     align-content: center;
-    padding-right: 40px;
+    padding-right: 28px;
 }
 
 .top-nav .nome-perfil {
@@ -220,9 +226,22 @@ body {
     margin-left: 1rem;
 }
 
+.separated {
+    width: 1px;
+    background-color: #5F5F5F;
+    align-self: stretch;
+}
+
 .grid-main .summary .art-summary {
     display: flex;
-    flex-direction: row;   /* descrição em cima, número embaixo (se preferir linha, coloque row) */
+    align-items: center;
+    gap: 18px;
+}
+
+/*
+.grid-main .summary .art-summary {
+    display: flex;
+    flex-direction: row;
     gap: 16px;
     align-items: center;
     padding-right: 24px;
@@ -231,12 +250,22 @@ body {
     min-width: 0;  
 }
 
+*/
+
 .grid-main .summary .art-summary .number {
     font-weight: 600;
     color: var(--primary-color);
-    font-size: 1.3em;
+    font-size: 24px;
 }
 
-.grid-main .summary .art-summary .nome {
+.grid-main .summary .art-summary .description {
     color: var(--font-color);
+    font-size: 16px;
+}
+
+.grid-main .summary a:hover {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: 0.5s ease-in;
 }
