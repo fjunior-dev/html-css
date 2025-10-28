@@ -1,0 +1,53 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 12;
+    /* width: 750px; */
+    width: calc(64vw);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 4px;
+    padding-top: 32px;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    animation: smartAnimateIn .3s cubic-bezier(0.7, -0.4, 0.4, 1.4);
+}
+
+.modal-ativa {
+    display: block;
+}
+
+.modal__grafico {
+    position: relative;
+}
+
+.modal__grafico > img {
+    width: 100%;
+    position: relative;
+}
+
+.modal__botao-fechar {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url(../../assets/img/close-line.svg) no-repeat center / contain;
+    position: absolute;
+    z-index: 14;
+    right: 34px;
+    top: 0px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .modal {
+        width: calc(100vw - 48px);
+    }
+
+    .modal__botao-fechar {
+        right: 8px;
+        top: -20px;
+        width: 28px;
+        height: 28px;
+    }
+}

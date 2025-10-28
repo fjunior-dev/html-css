@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título e descrição -->
+    <title>+inova | Uma nova forma de investir</title>
+    <meta name="description" content="Fatores ambientais, sociais e de governança estão ganhando importância em toda a sociedade e também nos investimentos. Saiba mais sobre essa relação ao entender as alternativas ESG!">
+    <!-- Cor customizada para dispositivos móveis -->
+    <meta name="theme-color" content="#14CC47">
+    <!-- Imagens para compartilhamento de links -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="+inova">
+    <meta property="og:title" content="+inova | Uma nova forma de investir">
+    <meta property="og:description" content="Fatores ambientais, sociais e de governança estão ganhando importância em toda a sociedade e também nos investimentos. Saiba mais sobre essa relação ao entender as alternativas ESG!">
+    <meta property="og:image" itemprop="image" content="https://maisinova.vercel.app/assets/img/maisinovashare.jpg">
+    <meta property="og:image:secure_url" content="https://maisinova.vercel.app/assets/img/maisinovashare.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maisinova.vercel.app/">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon3.ico" type="image/x-icon">
+    <!-- Folhas de estilo -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/rodape.css">
+    <link rel="stylesheet" href="assets/css/quiz/introducao.css">
+    <link rel="stylesheet" href="assets/css/quiz/quiz.css">
+    <link rel="stylesheet" href="assets/css/quiz/loading.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <a href="index.html" title="Ir para a página inicial"><img src="assets/img/logo.png" alt="Logo +inova" class="cabecalho__logo"></a>
+        <nav class="cabecalho__navegacao">
+            <button class="cabecalho__hamburguer" aria-label="Menu lateral" title="Menu lateral" data-hamburguer></button>
+            <ul class="cabecalho__menu" data-menu>
+                <li>
+                    <button class="cabecalho__close" aria-label="Fechar menu lateral" title="Fechar menu lateral" data-close-menu></button>
+                </li>
+                <li>
+                    <a href="index.html" class="cabecalho__menu--item">ESG</a>
+                </li>
+                <li>
+                    <a href="index.html#mercado" class="cabecalho__menu--item">Mercado</a>
+                </li>
+                <li>
+                    <a href="index.html#noticias" class="cabecalho__menu--item">Notícias</a>
+                </li>
+                <li>
+                    <a href="index.html#qualperfil" class="cabecalho__menu--item">Perfis</a>
+                </li>
+                <li>
+                    <a href="fazer-o-teste.html" class="cabecalho__menu--item cabecalho__menu--item-teste">Fazer o teste</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Overlay -->
+    <div class="overlay" data-overlay></div>
+
+    <div class="loading" data-loading>
+        <h3 class="loading__titulo">Só um minuto...</h3>
+        <p class="loading__texto">Estamos analisando o seu teste.</p>
+        <div class="loading__imagem">
+            <img src="assets/img/quiz/cofrinho 1.png" alt="Cofrinho" class="loading__cofrinho">
+            <img src="assets/img/quiz/Ellipse.png" class="loading__elipse">
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main class="principal" data-principal>
+        
+        <section class="quiz">
+            <div class="quiz__box">
+                <h2 class="quiz__pergunta quiz__titulo" data-question>Qual a sua experiência com investimentos?</h2>
+                <span class="quiz__alerta" data-alerta>Por favor, escolha uma alternativa para continuar!</span>
+                <div class="quiz__alternativas">
+                    <label class="quiz__alternativa" data-option="1">
+                        <input type="radio" id="iniciante" name="alternativa">
+                        <span class="checkmark"></span>
+                        <label for="iniciante" data-option-text="1">Nenhuma ou quase nada de experiência.</label>
+                    </label>
+    
+                    <label class="quiz__alternativa" data-option="2">
+                        <input type="radio" id="moderado" name="alternativa">
+                        <span class="checkmark"></span>
+                        <label for="moderado" data-option-text="2">Conheço alguns fundos de investimento.</label>
+                    </label>
+    
+                    <label class="quiz__alternativa" data-option="3">
+                        <input type="radio" id="arrojado" name="alternativa">
+                        <span class="checkmark"></span>
+                        <label for="arrojado" data-option-text="3">Escolho meus próprios investimentos e tenho ampla experiência no mercado.</label>
+                    </label>
+
+                </div>
+                <button class="quiz__botao quiz__botao--inativo" title="Avançar" data-botao-avancar>Avançar</button>
+            </div>
+
+            <div class="quiz__progress">
+                <div class="quiz__progress-bar" data-progressbar></div>
+            </div>
+
+            <div class="introducao__ilustracao introducao__ilustracao--quiz">
+                <img src="assets/img/quiz/ilustração quiz.svg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p class="rodape__intro">&copy; Website desenvolvido por:</p>
+
+        <div class="rodape__equipe">
+            <div class="rodape__grupo">
+                <span class="rodape__tech">Cientistas de Dados</span>
+                <ul class="rodape__dados">
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/beatriz-de-brito-lima/" target="_blank" rel="noreferrer">Beatriz Brito</a>
+                    </li>
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/abreujms" target="_blank" rel="noreferrer">João M. Abreu</a>
+                    </li>
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/lucas-teixeira-matos/" target="_blank" rel="noreferrer">Lucas Teixeira</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="rodape__grupo">
+                <span class="rodape__tech">UX/UI Designers</span>
+                <ul class="rodape__dados">
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/karolina-lima-9a277a124/" target="_blank" rel="noreferrer">Karolina Lima</a>
+                    </li>
+                    <li class="rodape__membro">
+                        <a href="http://linkedin.com/in/lianna-ribeiro-3366b9137/" target="_blank" rel="noreferrer">Lianna Ribeiro</a>
+                    </li>
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/tais-ximenes-43093a192" target="_blank" rel="noreferrer">Taís Ximenes</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="rodape__grupo">
+                <span class="rodape__tech">Programadores</span>
+                <ul class="rodape__dados">
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/gabriel-barros-526ab7127/" target="_blank" rel="noreferrer">Gabriel Barros</a>
+                    </li>
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/larissakcarvalho/" target="_blank" rel="noreferrer">Larissa Karoline</a>
+                    </li>
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/lilia-rosa-0a5ab8216/" target="_blank" rel="noreferrer">Lilia Rosa</a>
+                    </li>
+                    <li class="rodape__membro">
+                        <a href="https://www.linkedin.com/in/mateus-gomes-barros-b90863206" target="_blank" rel="noreferrer">Mateus Gomes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script type="module" src="assets/js/quiz.js"></script>
+</body>
+</html>
